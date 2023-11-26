@@ -5,9 +5,6 @@ require("dotenv").config()
 const app=express()
 app.use(express.json())
 app.use(cookieParser())
-
-app.get("/",(req,res)=>{
-    res.send("OK")
-})
+app.use("/api",require("./routes/movieRoute"))
 
 module.exports=app
