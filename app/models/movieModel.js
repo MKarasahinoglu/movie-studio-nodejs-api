@@ -12,6 +12,10 @@ const directorSchema=new mongoose.Schema({
 })
 
 const movieSchema=new mongoose.Schema({
+    userEmail:{
+        type:String,
+        required:true
+    },
     title:{
         type:String,
         required:true
@@ -31,7 +35,5 @@ const movieSchema=new mongoose.Schema({
     },
     director:directorSchema
 })
-
-
 
 module.exports=mongoose.model("movies",movieSchema)
