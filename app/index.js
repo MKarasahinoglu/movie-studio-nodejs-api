@@ -1,7 +1,6 @@
 const express=require("express")
 const cookieParser=require("cookie-parser")
 const { config } = require("dotenv")
-const { verify } = require("jsonwebtoken")
 require("dotenv").config()
 
 const app=express()
